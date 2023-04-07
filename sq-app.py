@@ -20,5 +20,15 @@ def startOver():
 def renderPage1():
     return render_template("sq-p1.html")
     
+@app.route('/q2', methods=['GET','POST'])
+def renderPage2():
+    session["q1ans"]=request.form['q1ans']
+    return render_template("sq-p2.html")
+    
+@app.route('/results', methods=['GET', 'POST'])
+def renderResults():
+    session["q2ans"]=request.form['q2ans']
+    return render_template("sq-results.html")
+    
 if __name__=="__main__":
     app.run(debug=False)

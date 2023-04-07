@@ -1,0 +1,10 @@
+{% extends "sqlayout.html" %}
+
+{% block title %}quiz results{% endblock %}
+
+{% block content %}
+	<h1>Your results:</h1>
+	<p>You answered {{ session['q1ans'] }} for question 1.</p>
+	<p>You answered {{ session['q2ans'] }} for question 2.</p>
+
+{% endblock %}

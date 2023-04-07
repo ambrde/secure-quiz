@@ -1,0 +1,18 @@
+{% extends "sqlayout.html" %}
+
+{% block title %}quiz{% endblock %}
+
+{% block content %}
+	<h1>Question 2</h1>
+
+	<form action={{ url_for("renderResults") }} method="POST">
+		<input type="radio" id="option 1" name="q2ans" value="option 1">
+		<label for="option 1">Option 1</label><br>
+		<input type="radio" id="option 2" name="q2ans" value="option 2">
+		<label for="option 2">Option 2</label><br>
+		<input type="radio" id="option 3" name="q2ans" value="option 3">
+		<label for="option 3">Option 3</label><br><br>
+		<input type="submit" value="Submit">
+	</form> 
+	
+{% endblock %}
