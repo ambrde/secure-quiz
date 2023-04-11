@@ -33,12 +33,15 @@ def renderPage3():
 @app.route('/results', methods=['GET', 'POST'])
 def renderResults():
     session["q3ans"]=request.form['q3ans']
-    return render_template("sq-results.html")
     checkAnswers()
+    return render_template("sq-results.html")
+    
  
 def checkAnswers():
     if session['q1ans']=="vehicles next to the broken line may pass":
         print("yas")
+    else:
+        print(":(")
 #if session['qxans']does not equal qxcorrectans
     #show x/turn red
     #show correct answer
