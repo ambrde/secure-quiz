@@ -1,0 +1,18 @@
+{% extends "sqlayout.html" %}
+
+{% block title %}Question 3 - CA Driver's Quiz{% endblock %}
+
+{% block content %}
+	<h3>When is it legal to drive in a bike lane?</h3>
+
+	<form action={{ url_for("renderResults") }} method="POST">
+		<input type="radio" id="option 1" name="q3ans" value="never">
+		<label for="option 1">never</label><br>
+		<input type="radio" id="option 2" name="q3ans" value="when turning (within 200 ft of an intersection)">
+		<label for="option 2">when turning (within 200 ft of an intersection)</label><br>
+		<input type="radio" id="option 3" name="q3ans" value="to pass another car">
+		<label for="option 3">to pass another car</label><br><br>
+		<input type="submit" value="Submit">
+	</form> 
+	
+{% endblock %}

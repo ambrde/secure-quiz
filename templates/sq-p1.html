@@ -1,17 +1,17 @@
 {% extends "sqlayout.html" %}
 
-{% block title %}quiz{% endblock %}
+{% block title %}Question 1 - CA Driver's Quiz{% endblock %}
 
 {% block content %}
-	<h1>Question 1</h1>
+	<h3>What does a solid yellow line next to a broken yellow line mean?</h3>
 
 	<form action={{ url_for("renderPage2") }} method="POST">
-		<input type="radio" id="option 1" name="q1ans" value="option 1">
-		<label for="option 1">Option 1</label><br>
-		<input type="radio" id="option 2" name="q1ans" value="option 2">
-		<label for="option 2">Option 2</label><br>
-		<input type="radio" id="option 3" name="q1ans" value="option 3">
-		<label for="option 3">Option 3</label><br><br>
+		<input type="radio" id="option 1" name="q1ans" value="vehicles next to the broken line may pass">
+		<label for="option 1">vehicles next to the broken line may pass</label><br>
+		<input type="radio" id="option 2" name="q1ans" value="vehicles next to the solid line may pass">
+		<label for="option 2">vehicles next to the solid line may pass</label><br>
+		<input type="radio" id="option 3" name="q1ans" value="vehicles on both sides may pass">
+		<label for="option 3">vehicles on both sides may pass</label><br><br>
 		<input type="submit" value="Submit">
 	</form>
 	

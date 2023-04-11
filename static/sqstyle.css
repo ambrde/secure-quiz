@@ -1,0 +1,44 @@
+
+body{
+	font-family: sans-serif;
+}
+
+.info{
+	text-indent: 40px;
+}
+
+.linkbtn:link{
+	width: 95%;
+	text-align: center;
+	display: inline-block;
+	margin: 15px 0px 15px 0px;
+	background-color: gainsboro;
+	border-radius: 5px;
+	color: darkslategray;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.linkbtn:visited{
+	width: 95%;
+	text-align: center;
+	display: inline-block;
+	margin: 15px 0px 15px 0px;
+	background-color: gainsboro;
+	border-radius: 5px;
+	color: darkslategray;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.linkbtn:hover{
+	width: 95%;
+	text-align: center;
+	display: inline-block;
+	margin: 15px 0px 15px 0px;
+	background-color: lightgray;
+	border-radius: 5px;
+	color: black;
+	padding: 5px;
+	text-decoration: none;
+}

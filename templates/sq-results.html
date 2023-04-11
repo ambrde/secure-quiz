@@ -1,10 +1,16 @@
 {% extends "sqlayout.html" %}
 
-{% block title %}quiz results{% endblock %}
+{% block title %}Your Results - CA Driver's Quiz{% endblock %}
 
 {% block content %}
 	<h1>Your results:</h1>
-	<p>You answered {{ session['q1ans'] }} for question 1.</p>
-	<p>You answered {{ session['q2ans'] }} for question 2.</p>
+	<p>You answered "{{ session['q1ans'] }}" for question 1.</p>
+	<p class="info">The correct answer for question 1 was "vehicles next to the broken line may pass."</p>
+	<p>You answered "{{ session['q2ans'] }}" for question 2.</p>
+	<p class="info">The correct answer for question 2 was "at all times."</p>
+	<p>You answered "{{ session['q3ans'] }}" for question 3.</p>
+	<p class="info">The correct answer for question 3 was "when turning (within 200 ft of an intersection)."</p>
+	
+	<a href="/startOver" class="linkbtn">Retake Quiz</a>
 
 {% endblock %}

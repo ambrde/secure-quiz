@@ -16,7 +16,7 @@ def startOver():
     session.clear()
     return redirect(url_for('renderMain'))
     
-@app.route('/q1')
+@app.route('/q1', methods=['GET','POST'])
 def renderPage1():
     return render_template("sq-p1.html")
     
@@ -25,10 +25,24 @@ def renderPage2():
     session["q1ans"]=request.form['q1ans']
     return render_template("sq-p2.html")
     
+@app.route('/q3', methods=['GET', 'POST'])
+def renderPage3():
+    session["q2ans"]=request.form['q2ans']
+    return render_template("sq-p3.html")
+
 @app.route('/results', methods=['GET', 'POST'])
 def renderResults():
-    session["q2ans"]=request.form['q2ans']
+    session["q3ans"]=request.form['q3ans']
     return render_template("sq-results.html")
+    checkAnswers()
+ 
+def checkAnswers():
+    if session['q1ans']=="vehicles next to the broken line may pass":
+        print("yas")
+#if session['qxans']does not equal qxcorrectans
+    #show x/turn red
+    #show correct answer
+    
     
 if __name__=="__main__":
     app.run(debug=False)
