@@ -33,19 +33,24 @@ def renderPage3():
 @app.route('/results', methods=['GET', 'POST'])
 def renderResults():
     session["q3ans"]=request.form['q3ans']
-    checkAnswers()
-    return render_template("sq-results.html")
+    check = checkAnswers()
+    return render_template("sq-results.html", c1=check[0], c2=check[1], c3=check[2])
     
  
 def checkAnswers():
     if session['q1ans']=="vehicles next to the broken line may pass":
-        print("yas")
+        c1 = "That's correct!"
     else:
-        print(":(")
-#if session['qxans']does not equal qxcorrectans
-    #show x/turn red
-    #show correct answer
-    
-    
+        c1 = "That's incorrect. The correct answer for question 1 was 'vehicles next to the broken line may pass.'"
+    if session['q2ans']=="at all times":
+        c2 = "That's correct!"
+    else:
+        c2 = "That's incorrect. The correct answer for question 2 was 'at all times.'"
+    if session['q3ans']=="when turning (within 200 ft of an intersection)":
+        c3 = "That's correct!"
+    else:
+        c3 = "That's incorrect. The correct answer for question 3 was 'when turning (within 200 ft of an intersection).'"
+    return c1, c2, c3
+
 if __name__=="__main__":
     app.run(debug=False)
